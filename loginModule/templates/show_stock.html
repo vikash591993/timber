@@ -1,0 +1,9 @@
+{% include 'navbar.html' %}
+{% load render_table from django_tables2 %}
+<head>
+    <meta charset="UTF-8">
+    <title>show stock</title>
+</head>
+<body>
+        {% render_table supplierTable %}
+</body>

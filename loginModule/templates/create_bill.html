@@ -1,0 +1,141 @@
+{% include 'navbar.html' %}
+{% load staticfiles %}
+<head>
+    <title>Create Bill</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'loginModule/external.css' %}">
+</head>
+<body>
+<div class="row">
+    <div class="col-sm-1">
+
+    </div>
+    <div class="col-sm-3">
+        {% block body %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="table-responsive" style="display:none">
+            <table class="table table-bordered" id="soldWoodTableCopy" name="nameSoldWoodTableCopy">
+                <thead>
+                    <tr>
+                        <th scope="col">Wood Type</th>
+                        <th scope="col">Wood Code</th>
+                        <th scope="col">Volume</th>
+                        <th scope="col">Rate</th>
+                        <th scope="col">Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody class="tablerow">
+                </tbody>
+            </table>
+        </div>
+            <button type="submit" class="form-control" name="clientdetail" id="addToClientDetailBtn" >Submit</button>
+        </form>
+        {% endblock %}
+    </div>
+
+    <div class="col-sm-8">
+        <div class="col-sm-12">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="soldWoodTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Wood Type</th>
+                        <th scope="col">Wood Code</th>
+                        <th scope="col">Volume</th>
+                        <th scope="col">Rate</th>
+                        <th scope="col">Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody class="tablerow">
+                </tbody>
+            </table>
+        </div>
+        </div>
+            <div class="col-sm-2">
+                <select class="form-control" id="woodType">
+                    <option>Wood Type</option>
+                    <option>SAL</option>
+                    <option>SISAM</option>
+                    <option>GAMHAR</option>
+                </select>
+            </div>
+
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="woodCode" placeholder="Wood Code" required>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="volume" placeholder="Volume" required>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="rate" placeholder="Rate" required>
+            </div>
+            <div class="col-sm-2">
+                <input type="submit" class="form-control" value="Add" name="addbutton" id="addToSoldWoodTable">
+            </div>
+            <div class="col-sm-2">
+                <input type="submit" class="form-control" onclick="DeleteRowFromSoldWoodTable()" value="Delete">
+            </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+
+function CopyTable(){
+  //copy sold wood table to hidden table
+  var source = document.getElementById('soldWoodTable');
+  var destination = document.getElementById('soldWoodTableCopy');
+  var copy = source.cloneNode(true);
+  copy.id = 'soldWoodTableCopy';
+  destination.parentNode.replaceChild(copy, destination);
+}
+
+$("#addToClientDetailBtn").click(function(){
+    var clientPhone = document.getElementById("clientPhone").value;
+    var clientName = document.getElementById("clientName").value;
+
+    if(isNaN(clientPhone)){
+        windows.alert("Incorrect Values");
+        return false;
+    }
+});
+
+$("#addToSoldWoodTable").click(function(){
+    //copy sold wood table to hidden table
+    CopyTable();
+
+    var woodtype = document.getElementById("woodType").value;
+    var woodcode = document.getElementById("woodCode").value;
+    var volume = document.getElementById("volume").value;
+    var rate = document.getElementById("rate").value;
+    var total = volume*rate;
+
+    if (rate == "" || woodcode == "" || volume == "" || woodtype == "Wood Type")
+    {
+        window.alert("Incorrect values ");
+        return false;
+    }
+
+    if(isNaN(volume) || isNaN(rate)){
+        window.alert("Incorrect values");
+        return false;
+    }
+
+    document.getElementById("woodType").value = 'Wood Type';
+    document.getElementById("woodCode").value = '';
+    document.getElementById("volume").value = '';
+    document.getElementById("rate").value = '';
+
+    $( ".tablerow" ).append( '<tr>'+'<td>' + woodtype + '</td>'+'<td>' + woodcode + '</td>'+'<td>' + volume + '</td>'+'<td>' + rate + '</td>'+'<td>' + total + '</td></tr>' );
+
+});
+
+function DeleteRowFromSoldWoodTable() {
+  var x = document.getElementById("soldWoodTable").rows.length;
+  document.getElementById("soldWoodTable").deleteRow(x-1);
+
+  //Copy sold wood table to hidden table
+  CopyTable();
+}
+
+</script>
