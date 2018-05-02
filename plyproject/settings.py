@@ -25,7 +25,7 @@ SECRET_KEY = 'ttj@frq^$79yvw9d5h(we%r(cf@!_mx)7gt0=)$%qzvz_d#4@n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['timberwebapp.herokuapp.com']
 
 
 # Application definition
@@ -123,5 +123,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/loginModule/'
