@@ -11,10 +11,12 @@
     </div>
     <div class="col-sm-3">
         {% block body %}
-        <form method="post">
+        <form method="post" onsubmit="return Validate()">
             {% csrf_token %}
             {{ form.as_p }}
-            <div class="table-responsive" style="display:none">
+            <label for="invoiceDate">Invoice Date:</label>
+            <input type="date" name="invoice_date" id="invoiceDate" class="form-control" required>
+            <div class="table-responsive">
             <table class="table table-bordered" id="soldWoodTableCopy" name="nameSoldWoodTableCopy">
                 <thead>
                     <tr>
@@ -22,13 +24,14 @@
                         <th scope="col">Wood Code</th>
                         <th scope="col">Volume</th>
                         <th scope="col">Rate</th>
+                        <th scope="col">Gst Tax</th>
                         <th scope="col">Total Amount</th>
                     </tr>
                 </thead>
                 <tbody class="tablerow">
                 </tbody>
             </table>
-        </div>
+            </div>
             <button type="submit" class="form-control" name="clientdetail" id="addToClientDetailBtn" >Submit</button>
         </form>
         {% endblock %}
@@ -36,7 +39,7 @@
 
     <div class="col-sm-8">
         <div class="col-sm-12">
-        <div class="table-responsive">
+        <div class="table-responsive" style="width:100%;">
             <table class="table table-bordered" id="soldWoodTable">
                 <thead>
                     <tr>
@@ -44,6 +47,7 @@
                         <th scope="col">Wood Code</th>
                         <th scope="col">Volume</th>
                         <th scope="col">Rate</th>
+                        <th scope="col">Tax Type(%)</th>
                         <th scope="col">Total Amount</th>
                     </tr>
                 </thead>
@@ -71,9 +75,16 @@
                 <input type="text" class="form-control" id="rate" placeholder="Rate" required>
             </div>
             <div class="col-sm-2">
+                <select class="form-control" id="woodGstTax" value="Tax Type">
+                    <option selected>Tax Type</option>
+                    <option>CGST & SGST</option>
+                    <option>IGST</option>
+                </select>
+            </div>
+            <div class="col-sm-1">
                 <input type="submit" class="form-control" value="Add" name="addbutton" id="addToSoldWoodTable">
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-1">
                 <input type="submit" class="form-control" onclick="DeleteRowFromSoldWoodTable()" value="Delete">
             </div>
     </div>
@@ -90,27 +101,35 @@ function CopyTable(){
   destination.parentNode.replaceChild(copy, destination);
 }
 
-$("#addToClientDetailBtn").click(function(){
+function Validate(){
     var clientPhone = document.getElementById("clientPhone").value;
     var clientName = document.getElementById("clientName").value;
 
-    if(isNaN(clientPhone)){
-        windows.alert("Incorrect Values");
+    console.log(clientPhone)
+
+    //Check if there is not any input in table
+    var tSoldWoodTable = document.getElementById("soldWoodTable").rows.length;
+    console.log(tSoldWoodTable)
+    console.log("inside functio");
+    if(isNaN(clientPhone) || (tSoldWoodTable-1) == 0){
+        console.log("insdie if condition")
+        window.alert("Incorrect Values");
         return false;
     }
-});
+}
 
 $("#addToSoldWoodTable").click(function(){
     //copy sold wood table to hidden table
     CopyTable();
 
-    var woodtype = document.getElementById("woodType").value;
-    var woodcode = document.getElementById("woodCode").value;
+    var woodType = document.getElementById("woodType").value;
+    var woodCode = document.getElementById("woodCode").value;
     var volume = document.getElementById("volume").value;
     var rate = document.getElementById("rate").value;
+    var gstTax = document.getElementById("woodGstTax").value;
     var total = volume*rate;
 
-    if (rate == "" || woodcode == "" || volume == "" || woodtype == "Wood Type")
+    if (rate == "" || woodCode == "" || volume == "" || woodType == "Wood Type" || gstTax == "Tax Type")
     {
         window.alert("Incorrect values ");
         return false;
@@ -120,14 +139,25 @@ $("#addToSoldWoodTable").click(function(){
         window.alert("Incorrect values");
         return false;
     }
+    var taxPercentage;
+    switch(gstTax) {
+    case "CGST & SGST":
+        taxPercentage = 18;
+        break;
+    case "IGST":
+        taxPercentage = 18;
+        break;
+    }
 
     document.getElementById("woodType").value = 'Wood Type';
+    document.getElementById("woodGstTax").value = 'Tax Type';
     document.getElementById("woodCode").value = '';
     document.getElementById("volume").value = '';
     document.getElementById("rate").value = '';
 
-    $( ".tablerow" ).append( '<tr>'+'<td>' + woodtype + '</td>'+'<td>' + woodcode + '</td>'+'<td>' + volume + '</td>'+'<td>' + rate + '</td>'+'<td>' + total + '</td></tr>' );
-
+    //$( ".tablerow" ).append( '<tr>'+'<td>' + woodtype + '</td>'+'<td>' + woodcode + '</td>'+'<td>' + volume + '</td>'+'<td>' + rate + '</td>'+'<td>' + total + '</td></tr>' );
+    $( ".tablerow" ).append( '<tr>'+'<td>'+'<input type=text name="woodType[]" readonly="readonly" value="' + woodType + '" style="border:0px">'+'</td>'+'<td>'+'<input type=text style="border:0px" readonly="readonly" name="woodCode[]" value="' + woodCode + '">'+'</td>'+'<td>'+'<input style="border:0px" type=text name="volume[]" readonly="readonly" value="' + volume + '">'+'</td>'+'<td>'+'<input style="border:0px" type=text readonly="readonly" name="rate[]" value="' + rate + '">'+'</td>'+'<td>'+'<input type=text style="border:0px" name="gstTax[]" readonly="readonly" value="' + taxPercentage + '">'+'</td>'+'<td>'+'<input type=text style="border:0px" name="total[]" readonly="readonly" value="' + total + '">'+'</td>'+'</tr>' );
+    //$(".tablerow").append('<tr>' + '<td>' + '<input type=text name="woodType[]" value="' + woodtype + '"/>'+'</td>'+'<td>' + woodcode + '</td>'+'<td>' + volume + '</td>'+'<td>' + rate + '</td>'+'<td>' + total + '</td></tr>' );
 });
 
 function DeleteRowFromSoldWoodTable() {

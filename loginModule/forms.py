@@ -40,8 +40,8 @@ class DateInput(forms.DateInput):
 
 TAX_CHOICES = (
     ('Tax Type','Tax Type'),
-    ('IGST','IGST'),
-    ('CGST & SGST','CGST & SGST'),
+    ('18','IGST'),
+    ('9','CGST & SGST'),
 )
 
 
@@ -51,13 +51,14 @@ class SupplierForm(forms.ModelForm):
     sender_name = forms.CharField( max_length=50, widget=forms.TextInput(attrs={'id':'senderName','class':"form-control"}))
     sender_address = forms.CharField( max_length=100, widget=forms.TextInput(attrs={'id':'senderAddress','class':"form-control"}))
     sender_gstin = forms.CharField( max_length=100, widget=forms.TextInput(attrs={'id':'senderGstin','class':"form-control"}))
-    total_amount_before_tax = forms.FloatField(widget=forms.TextInput(attrs={'id':'taxAmountBeforeTax','class':"form-control"}))
+    sender_phone = forms.CharField(max_length=10, widget=forms.TextInput(attrs={'id':'senderPhone','class':"form-control"}))
+    total_amount_before_tax = forms.FloatField(widget=forms.TextInput(attrs={'id':'totalAmountBeforeTax','class':"form-control"}))
     tax_amount = forms.FloatField( widget=forms.TextInput(attrs={'id':'taxAmount','class':"form-control"}))
-    total_amount_after_tax = forms.FloatField( widget=forms.TextInput(attrs={'id':'taxAmountAfterTax','class':"form-control"}))
+    total_amount_after_tax = forms.FloatField( widget=forms.TextInput(attrs={'id':'totalAmountAfterTax','class':"form-control"}))
     invoice_date = forms.DateField(widget=DateInput(attrs={'id':'invoiceDate','class':"form-control"}))
     date_of_supply = forms.DateField(widget=DateInput(attrs={'id':'dateOfSupply','class':"form-control"}))
     tax_type = forms.CharField( label="Tax Type", widget=forms.Select( choices=TAX_CHOICES, attrs={'id':'taxType','class':"form-control"}))
 
     class Meta:
         model = SupplierDetail
-        fields = {'invoice_number', 'invoice_date', 'vehicle_number', 'date_of_supply','sender_name','sender_address', 'sender_gstin','tax_type','total_amount_after_tax','total_amount_before_tax','tax_amount'}
+        fields = {'invoice_number', 'invoice_date', 'vehicle_number', 'date_of_supply','sender_name','sender_address', 'sender_gstin','tax_type','total_amount_after_tax','total_amount_before_tax','tax_amount','sender_phone'}

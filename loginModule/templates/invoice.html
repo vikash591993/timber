@@ -1,0 +1,108 @@
+{% load staticfiles %}
+<html>
+     <head>
+         <title>invoice</title>
+         <meta charset="UTF-8">
+         <style type="text/css">
+             body {
+                 font-weight: 200;
+                 font-size: 14px;
+             }
+             #headerName {
+                 font-size: 20px;
+                 font-weight: 100;
+                 text-align: center;
+                 color: #007cae;
+             }
+             #headerGstin{
+                font-size :15px;
+                float:left;
+             }
+             #headerPhone{
+                font-size: 15px;
+                float: right;
+             }
+             .title {
+                 font-size: 22px;
+                 font-weight: 100;
+                /* text-align: right;*/
+                padding: 10px 20px 0px 20px;
+             }
+             .title span {
+                 color: #007cae;
+             }
+             .details {
+                 padding: 10px 20px 0px 20px;
+                 text-align: left !important;
+                 margin-left: 10%;
+                 color: #007cae;
+             }
+             .hrItem {
+                 border: none;
+                 height: 1px;
+                 /* Set the hr color */
+                 color: #333; /* old IE */
+                 background-color: #fff; /* Modern Browsers */
+             }
+         </style>
+     </head>
+     <body>
+        <h2 id="headerName">M/s Bihar Timber Saw Mill<br>
+                                Civil Line Thana ,Gaya<br>
+                                Phone: 9955741791
+
+        </h2>
+        <br>
+        <div>
+            <span id="headerGstin">GSTIN: 2038409238402ABLSDF</span>
+        </div>
+        <hr>
+        <br>
+        {% block body %}
+        <B>Client Details</B><br>
+        <span class="details">{{ clientName }}</span><br>
+        <span class="details"> {{ clientAddress }}</span><br>
+        <span class="details">{{ clientPhone }}</span><br>
+        <span class="details">{{ clientProofId }}&nbsp</span><span class="details">{{ clientIdNumber }}</span><br>
+
+        <hr>
+        <span id="invoice_number"><B>Invoice:</B> &nbsp{{ newInvoiceNumer }} </span><br>
+        <hr>
+        {% endblock %}
+        <B>Vechicle Number: </B>
+        <hr>
+
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Wood Type</th>
+                        <th>Wood Code</th>
+                        <th>Volume</th>
+                        <th>Rate</th>
+                        <th>GST Tax</th>
+                        <th>Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for bills in billObjectsArray %}
+                <tr>
+                    <th>{{ bills.wood }}</th>
+                    <th>{{ bills.wood_code }}</th>
+                    <th>{{ bills.volume }}</th>
+                    <th>{{ bills.rate }}</th>
+                    <th>{{ bills.gst_tax }}</th>
+                    <th>{{ bills.total }}</th>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+        <u></u>
+
+        <h2>Total Amount: &nbsp{{ totalAmount }}</h2>
+     </body>
+ </html>
