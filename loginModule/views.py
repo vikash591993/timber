@@ -145,7 +145,7 @@ def CreateBill(request):
 
             #message = 'Stocks Added Successfully'
             #return render( request, succes_template_name, {'message': message} )
-            return render(request, 'invoice1.html', context)
+            return render(request, 'invoice.html', context)
 
     message = 'Something went wrong. Please try again'
     return render( request, error_template_name, {'message': message} )
@@ -197,29 +197,6 @@ def ShowStock(request):
     supplierTable = SupplierTable(supplierDetail)
     RequestConfig( request ).configure( supplierTable )
     return render(request, templateName, {'supplierTable': supplierTable})
-
-
-@login_required()
-def GeneratePDF(request, *args, **kwargs):
-    template = get_template('invoice1.html')
-
-    if request.method == 'GET':
-        context = {
-        }
-        html = template.render(context)
-        pdf = render_to_pdf('invoice.html', context)
-        #return HttpResponse(pdf, content_type='application/pdf')
-        if pdf:
-            response = HttpResponse(pdf, content_type='application/pdf')
-            filename = "Invoice_%s.pdf" %("123213")
-            content = "inline; filename='%s'" %(filename)
-            download = request.GET.get("download")
-            if download:
-                content = "attachment; filename='%s'" %(filename)
-            response['Content-Disposition'] = content
-            return response
-        return HttpResponse("Not Found")
-
 
 @login_required()
 def GenerateInvoice(request):
