@@ -6,7 +6,6 @@ import datetime
 # Create your models here.
 import psycopg2
 
-
 from django.utils.translation import pgettext_lazy
 
 

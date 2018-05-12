@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'plyproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd6o1b4cqg8ptcq',
-        'USER': 'smwrhyuznytcdq',
-        'PASSWORD': '6fd9fabc220e9dc4dd633219c147c8792b4703d7e736a6068b7fbe47f9f3396d',
-        'HOST': 'ec2-54-243-137-182.compute-1.amazonaws.com',
+        'NAME': 'dfja4b975r92bs',
+        'USER': 'rtzgrsycyjzntw',
+        'PASSWORD': '5c57d8e63a95adc7f69f03750ff54da8416b77682d9e89267bab20fca939d37b',
+        'HOST': 'ec2-23-23-142-5.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
