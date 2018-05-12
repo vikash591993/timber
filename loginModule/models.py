@@ -21,7 +21,7 @@ class ClientDetail(models.Model):
     client_phone = models.CharField( max_length=17)  # validators should be a list
     client_id = models.CharField(max_length=50)
     client_id_number = models.CharField(max_length=50)
-    last_updated_time = models.DateTimeField(default=datetime.datetime.now())
+    last_updated_time = models.DateTimeField(default=django.utils.timezone.now)
 
 
 class Bills(models.Model):
@@ -29,7 +29,7 @@ class Bills(models.Model):
     total_amount = models.FloatField(max_length=50, default=0)
     date = models.DateTimeField()
     client_detail = models.ForeignKey(ClientDetail)
-    last_updated_time = models.DateTimeField(default=datetime.datetime.now())
+    last_updated_time = models.DateTimeField(default=django.utils.timezone.now)
 
 
 class BillsDescriptions(models.Model):
@@ -40,7 +40,7 @@ class BillsDescriptions(models.Model):
     volume = models.FloatField(max_length=50, default=0)
     total = models.FloatField(max_length=50, default=0)
     gst_tax = models.FloatField(max_length=2,default=0)
-    last_updated_time = models.DateTimeField(default=datetime.datetime.now())
+    last_updated_time = models.DateTimeField(default=django.utils.timezone.now)
 
 
 class SupplierDetail(models.Model):
@@ -66,4 +66,4 @@ class SupplierWoodDescriptions( models.Model ):
     volume = models.FloatField( max_length=50, default=0 )
     total = models.FloatField( max_length=50, default=0 )
     gst_tax = models.FloatField( max_length=2, default=0 )
-    last_updated_time = models.DateTimeField( default=datetime.datetime.now() )
+    last_updated_time = models.DateTimeField( default=django.utils.timezone.now)
