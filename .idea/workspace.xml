@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f96bf6d-24c7-40f2-8e67-b91327fec86b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/loginModule/templates/navbar.html" afterPath="$PROJECT_DIR$/loginModule/templates/navbar.html" />
-      <change beforePath="$PROJECT_DIR$/loginModule/views.py" afterPath="$PROJECT_DIR$/loginModule/views.py" />
+      <change beforePath="$PROJECT_DIR$/loginModule/urls.py" afterPath="$PROJECT_DIR$/loginModule/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +28,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loginModule/templates/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="279">
               <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/loginModule/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -71,7 +79,6 @@
         <option value="$PROJECT_DIR$/loginModule/templates/login/login.html" />
         <option value="$PROJECT_DIR$/loginModule/templates/error.html" />
         <option value="$PROJECT_DIR$/loginModule/templates/success.html" />
-        <option value="$PROJECT_DIR$/loginModule/urls.py" />
         <option value="$PROJECT_DIR$/loginModule/templates/show_stock.html" />
         <option value="$PROJECT_DIR$/loginModule/tables.py" />
         <option value="$PROJECT_DIR$/loginModule/static/loginModule/create_bill.css" />
@@ -87,6 +94,7 @@
         <option value="$PROJECT_DIR$/loginModule/templates/navbar.html" />
         <option value="$PROJECT_DIR$/loginModule/templates/reademail.html" />
         <option value="$PROJECT_DIR$/loginModule/views.py" />
+        <option value="$PROJECT_DIR$/loginModule/urls.py" />
       </list>
     </option>
   </component>
@@ -542,13 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginModule/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginModule/templates/reademail.html" />
     <entry file="file://$PROJECT_DIR$/loginModule/views.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -564,6 +565,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginModule/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding />
         </state>
       </provider>

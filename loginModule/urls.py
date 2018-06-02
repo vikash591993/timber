@@ -19,4 +19,5 @@ urlpatterns = [
     url(r'^add_stock/$', AddStocks, name='add_stock'),
     url(r'^error/$', Error, name='error'),
     url(r'^show_stock/$', ShowStock, name='show_stock'),
+    url(r'^logout/$', Logout, name='logout'),
 ]
