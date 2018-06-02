@@ -8,6 +8,7 @@ from loginModule.views import CreateBill
 from loginModule.views import AddStocks
 from loginModule.views import Error
 from loginModule.views import ShowStock
+from loginModule.views import Logout
 from django.contrib.auth.views import login
 
 urlpatterns = [
