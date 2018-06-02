@@ -198,6 +198,7 @@ def ShowStock(request):
     RequestConfig( request ).configure( supplierTable )
     return render(request, templateName, {'supplierTable': supplierTable})
 
+
 @login_required()
 def GenerateInvoice(request):
     templateName = 'invoice.html'
@@ -219,3 +220,9 @@ def render_to_pdf(template_src, context_dict={}):
 def Error(request):
     template_name = 'error.html'
     return render(request, template_name, {})
+
+
+@login_required()
+def Logout(request):
+    logout( request )
+    return redirect('/loginModule/login')
