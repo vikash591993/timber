@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^loginModule/', include('loginModule.urls')),
+    url(r'^githubApi/', include('githubApi.urls')),
 ]
