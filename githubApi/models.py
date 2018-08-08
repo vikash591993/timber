@@ -2,6 +2,10 @@
 import django
 from django.db import models
 
+# Create your models here.
+import psycopg2
+
+from django.utils.translation import pgettext_lazy
 
 # Create your models here.
 class UserDetail(models.Model):
