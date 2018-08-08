@@ -18,3 +18,4 @@ class UserDetail(models.Model):
 class ApiLogDetail(models.Model):
     url = models.CharField(max_length = 100)
     user_id = models.ForeignKey(UserDetail)
+    inserted_at = models.DateTimeField( default=django.utils.timezone.now )
