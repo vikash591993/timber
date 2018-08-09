@@ -31,8 +31,6 @@ ALLOWED_HOSTS = ['timberwebapp.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'githubApi.apps.GithubapiConfig',
-    'githubApiV2.apps.Githubapiv2Config',
     'loginModule.apps.LoginmoduleConfig',
     'django.contrib.admin',
     'django.contrib.auth',
