@@ -21,4 +21,4 @@ class UserDetail1(models.Model):
 
 class ApiLogDetail1(models.Model):
     url = models.CharField(max_length = 100)
-    user_id = models.ForeignKey(UserDetail)
+    user_id = models.ForeignKey(UserDetail1)
