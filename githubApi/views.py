@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from githubApi.models import UserDetail
-from githubApi.models import ApiLogDetail
+from githubApi.models import UserDetail1
+from githubApi.models import ApiLogDetail1
 import requests
 from django.views.generic import ListView
 from xhtml2pdf import pisa
@@ -21,28 +21,28 @@ def Home(request):
         print ('https://api.github.com/users/'+username)
         userdata = response.json()
         # create a userdetail object
-        userDetailObject = UserDetail(username=userdata['login'], user_id=userdata['id'], email = userdata['email'], public_repos = userdata['public_repos'],
+        userDetailObject = UserDetail1(username=userdata['login'], user_id=userdata['id'], email = userdata['email'], public_repos = userdata['public_repos'],
                                       avatar_url=userdata['avatar_url'], created_at=userdata['created_at'], last_updated_at=userdata['updated_at'])
 
-        values = UserDetail.objects.all().filter( username=userdata['login'] ).count()
+        values = UserDetail1.objects.all().filter( username=userdata['login'] ).count()
         if(values!=0):
-            UserDetail.objects.all().filter( username=username ).update( public_repos = userdata['public_repos'],email=userdata['email'],
+            UserDetail1.objects.all().filter( username=username ).update( public_repos = userdata['public_repos'],email=userdata['email'],
                                       avatar_url=userdata['avatar_url'], last_updated_at=userdata['updated_at'])
         else:
             userDetailObject.save()
 
         #get the user id
-        userDetailObject = UserDetail.objects.get( username=userdata['login'])
+        userDetailObject = UserDetail1.objects.get( username=userdata['login'])
         userDetailObjectId = userDetailObject.pk
 
         # store in the ApiLogDetail
-        apiLogDetail = ApiLogDetail(url=userdata['url'], user_id_id=userDetailObjectId)
+        apiLogDetail = ApiLogDetail1(url=userdata['url'], user_id_id=userDetailObjectId)
         apiLogDetail.save()
-        userDetail = UserDetail.objects.all()
+        userDetail = UserDetail1.objects.all()
         return render(request, 'home.html', {"userDetail":userDetail,})
 
     if request.method == 'GET':
-        userDetail = UserDetail.objects.all()
+        userDetail = UserDetail1.objects.all()
         return render( request, 'home.html', {"userDetail": userDetail, } )
 
 
@@ -59,23 +59,18 @@ def NewUser(request):
 
 
 def GeneratePDF(request, *args, **kwargs):
-    userDetail = UserDetail.objects.all()
-    context = {
-        'userDetail':userDetail,
-    }
-
     todayBack = timezone.now()
     oneDayBack = timezone.now() - timezone.timedelta(days=1)
     oneWeekBack = timezone.now() - timezone.timedelta(days=7)
     oneMonthBack = timezone.now() - timezone.timedelta(days=30)
 
-    oneDayUser = UserDetail.objects.all().filter( created_at__range=(oneDayBack, todayBack) ).count()
-    oneWeekUser = UserDetail.objects.all().filter( created_at__range=(oneWeekBack, todayBack) ).count()
-    oneMonthUser = UserDetail.objects.all().filter( created_at__range=(oneMonthBack, todayBack) ).count()
+    oneDayUser = UserDetail1.objects.all().filter( created_at__range=(oneDayBack, todayBack) ).count()
+    oneWeekUser = UserDetail1.objects.all().filter( created_at__range=(oneWeekBack, todayBack) ).count()
+    oneMonthUser = UserDetail1.objects.all().filter( created_at__range=(oneMonthBack, todayBack) ).count()
 
-    oneDayApi = ApiLogDetail.objects.all().filter( inserted_at__range=(oneDayBack, todayBack) ).count()
-    oneWeekApi = ApiLogDetail.objects.all().filter( inserted_at__range=(oneWeekBack, todayBack) ).count()
-    oneMonthApi = ApiLogDetail.objects.all().filter( inserted_at__range=(oneMonthBack, todayBack) ).count()
+    oneDayApi = ApiLogDetail1.objects.all().filter( inserted_at__range=(oneDayBack, todayBack) ).count()
+    oneWeekApi = ApiLogDetail1.objects.all().filter( inserted_at__range=(oneWeekBack, todayBack) ).count()
+    oneMonthApi = ApiLogDetail1.objects.all().filter( inserted_at__range=(oneMonthBack, todayBack) ).count()
 
     context = {
         'oneDayUser': oneDayUser,
@@ -111,7 +106,7 @@ def render_to_pdf(template_src, context_dict={}):
 
 class Search(ListView):
     template_name = 'search.html'
-    model = UserDetail
+    model = UserDetail1
 
     def get_context_data(self, **kwargs):
         context = super(Search, self).get_context_data(**kwargs)

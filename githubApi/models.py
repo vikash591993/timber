@@ -8,7 +8,7 @@ import psycopg2
 from django.utils.translation import pgettext_lazy
 
 # Create your models here.
-class UserDetail(models.Model):
+class UserDetail1(models.Model):
     username = models.CharField( max_length=100 )
     user_id = models.CharField(max_length=50)
     email = models.CharField( max_length=100, null=True )
@@ -19,6 +19,6 @@ class UserDetail(models.Model):
     inserted_at = models.DateTimeField(default=django.utils.timezone.now)
 
 
-class ApiLogDetail(models.Model):
+class ApiLogDetail1(models.Model):
     url = models.CharField(max_length = 100)
     user_id = models.ForeignKey(UserDetail)
