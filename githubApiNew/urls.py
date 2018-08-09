@@ -1,9 +1,9 @@
 from django.conf.urls import url
-from githubApi.views import Home
-from githubApi.views import GithubLogin
-from githubApi.views import GeneratePDF
+from githubApiNew.views import Home
+from githubApiNew.views import GithubLogin
+from githubApiNew.views import GeneratePDF
 from . import views
-from githubApi.views import NewUser
+from githubApiNew.views import NewUser
 
 
 urlpatterns = [

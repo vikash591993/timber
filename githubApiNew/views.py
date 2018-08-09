@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from githubApi.models import UserDetail1
-from githubApi.models import ApiLogDetail1
+from githubApiNew.models import UserDetail1
+from githubApiNew.models import ApiLogDetail1
 import requests
 from django.views.generic import ListView
 from xhtml2pdf import pisa
