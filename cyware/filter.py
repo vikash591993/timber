@@ -1,9 +1,9 @@
 import django_filters
-from .models import UserDetail1
+from .models import UserInfo
 
 
 class UserFilter(django_filters.FilterSet):
 
     class Meta:
-        model = UserDetail1
+        model = UserInfo
         fields = ('username', 'email')

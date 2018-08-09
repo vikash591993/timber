@@ -1,6 +1,9 @@
 from django.shortcuts import render
-from githubApiNew.models import UserDetail1
-from githubApiNew.models import ApiLogDetail1
+
+# Create your views here.
+from django.shortcuts import render
+from cyware.models import UserInfo
+from cyware.models import ApiLog
 import requests
 from django.views.generic import ListView
 from xhtml2pdf import pisa
@@ -21,28 +24,28 @@ def Home(request):
         print ('https://api.github.com/users/'+username)
         userdata = response.json()
         # create a userdetail object
-        userDetailObject = UserDetail1(username=userdata['login'], user_id=userdata['id'], email = userdata['email'], public_repos = userdata['public_repos'],
+        userDetailObject = UserInfo(username=userdata['login'], user_id=userdata['id'], email = userdata['email'], public_repos = userdata['public_repos'],
                                       avatar_url=userdata['avatar_url'], created_at=userdata['created_at'], last_updated_at=userdata['updated_at'])
 
-        values = UserDetail1.objects.all().filter( username=userdata['login'] ).count()
+        values = UserInfo.objects.all().filter( username=userdata['login'] ).count()
         if(values!=0):
-            UserDetail1.objects.all().filter( username=username ).update( public_repos = userdata['public_repos'],email=userdata['email'],
+            UserInfo.objects.all().filter( username=username ).update( public_repos = userdata['public_repos'],email=userdata['email'],
                                       avatar_url=userdata['avatar_url'], last_updated_at=userdata['updated_at'])
         else:
             userDetailObject.save()
 
         #get the user id
-        userDetailObject = UserDetail1.objects.get( username=userdata['login'])
+        userDetailObject = UserInfo.objects.get( username=userdata['login'])
         userDetailObjectId = userDetailObject.pk
 
         # store in the ApiLogDetail
-        apiLogDetail = ApiLogDetail1(url=userdata['url'], user_id_id=userDetailObjectId)
+        apiLogDetail = ApiLog(url=userdata['url'], user_id_id=userDetailObjectId)
         apiLogDetail.save()
-        userDetail = UserDetail1.objects.all()
+        userDetail = UserInfo.objects.all()
         return render(request, 'home.html', {"userDetail":userDetail,})
 
     if request.method == 'GET':
-        userDetail = UserDetail1.objects.all()
+        userDetail = UserInfo.objects.all()
         return render( request, 'home.html', {"userDetail": userDetail, } )
 
 
@@ -64,13 +67,13 @@ def GeneratePDF(request, *args, **kwargs):
     oneWeekBack = timezone.now() - timezone.timedelta(days=7)
     oneMonthBack = timezone.now() - timezone.timedelta(days=30)
 
-    oneDayUser = UserDetail1.objects.all().filter( created_at__range=(oneDayBack, todayBack) ).count()
-    oneWeekUser = UserDetail1.objects.all().filter( created_at__range=(oneWeekBack, todayBack) ).count()
-    oneMonthUser = UserDetail1.objects.all().filter( created_at__range=(oneMonthBack, todayBack) ).count()
+    oneDayUser = UserInfo.objects.all().filter( created_at__range=(oneDayBack, todayBack) ).count()
+    oneWeekUser = UserInfo.objects.all().filter( created_at__range=(oneWeekBack, todayBack) ).count()
+    oneMonthUser = UserInfo.objects.all().filter( created_at__range=(oneMonthBack, todayBack) ).count()
 
-    oneDayApi = ApiLogDetail1.objects.all().filter( inserted_at__range=(oneDayBack, todayBack) ).count()
-    oneWeekApi = ApiLogDetail1.objects.all().filter( inserted_at__range=(oneWeekBack, todayBack) ).count()
-    oneMonthApi = ApiLogDetail1.objects.all().filter( inserted_at__range=(oneMonthBack, todayBack) ).count()
+    oneDayApi = ApiLog.objects.all().filter( inserted_at__range=(oneDayBack, todayBack) ).count()
+    oneWeekApi = ApiLog.objects.all().filter( inserted_at__range=(oneWeekBack, todayBack) ).count()
+    oneMonthApi = ApiLog.objects.all().filter( inserted_at__range=(oneMonthBack, todayBack) ).count()
 
     context = {
         'oneDayUser': oneDayUser,
@@ -106,7 +109,7 @@ def render_to_pdf(template_src, context_dict={}):
 
 class Search(ListView):
     template_name = 'search.html'
-    model = UserDetail1
+    model = UserInfo
 
     def get_context_data(self, **kwargs):
         context = super(Search, self).get_context_data(**kwargs)

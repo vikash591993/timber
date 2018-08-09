@@ -2,26 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f96bf6d-24c7-40f2-8e67-b91327fec86b" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/cyware/filter.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cyware/static/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cyware/static/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cyware/static/font.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cyware/static/jquery.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cyware/templates/github_login.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cyware/templates/home.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cyware/templates/invoice.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cyware/templates/navbar.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cyware/templates/search.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cyware/urls.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/githubApi/__init__.py" afterPath="$PROJECT_DIR$/githubApiNew/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/githubApi/admin.py" afterPath="$PROJECT_DIR$/githubApiNew/admin.py" />
-      <change beforePath="$PROJECT_DIR$/githubApi/apps.py" afterPath="$PROJECT_DIR$/githubApiNew/apps.py" />
-      <change beforePath="$PROJECT_DIR$/githubApi/filter.py" afterPath="$PROJECT_DIR$/githubApiNew/filter.py" />
-      <change beforePath="$PROJECT_DIR$/githubApi/models.py" afterPath="$PROJECT_DIR$/githubApiNew/models.py" />
-      <change beforePath="$PROJECT_DIR$/githubApi/static/bootstrap.min.css" afterPath="$PROJECT_DIR$/githubApiNew/static/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/githubApi/static/bootstrap.min.js" afterPath="$PROJECT_DIR$/githubApiNew/static/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/githubApi/static/font.css" afterPath="$PROJECT_DIR$/githubApiNew/static/font.css" />
-      <change beforePath="$PROJECT_DIR$/githubApi/static/jquery.min.js" afterPath="$PROJECT_DIR$/githubApiNew/static/jquery.min.js" />
-      <change beforePath="$PROJECT_DIR$/githubApi/templates/github_login.html" afterPath="$PROJECT_DIR$/githubApiNew/templates/github_login.html" />
-      <change beforePath="$PROJECT_DIR$/githubApi/templates/home.html" afterPath="$PROJECT_DIR$/githubApiNew/templates/home.html" />
-      <change beforePath="$PROJECT_DIR$/githubApi/templates/invoice.html" afterPath="$PROJECT_DIR$/githubApiNew/templates/invoice.html" />
-      <change beforePath="$PROJECT_DIR$/githubApi/templates/navbar.html" afterPath="$PROJECT_DIR$/githubApiNew/templates/navbar.html" />
-      <change beforePath="$PROJECT_DIR$/githubApi/templates/search.html" afterPath="$PROJECT_DIR$/githubApiNew/templates/search.html" />
-      <change beforePath="$PROJECT_DIR$/githubApi/tests.py" afterPath="$PROJECT_DIR$/githubApiNew/tests.py" />
-      <change beforePath="$PROJECT_DIR$/githubApi/urls.py" afterPath="$PROJECT_DIR$/githubApiNew/urls.py" />
-      <change beforePath="$PROJECT_DIR$/githubApi/views.py" afterPath="$PROJECT_DIR$/githubApiNew/views.py" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/admin.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/apps.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/filter.py" afterPath="$PROJECT_DIR$/cyware/filter.py" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/models.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/static/bootstrap.min.css" afterPath="$PROJECT_DIR$/cyware/static/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/static/bootstrap.min.js" afterPath="$PROJECT_DIR$/cyware/static/bootstrap.min.js" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/static/font.css" afterPath="$PROJECT_DIR$/cyware/static/font.css" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/static/jquery.min.js" afterPath="$PROJECT_DIR$/cyware/static/jquery.min.js" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/templates/github_login.html" afterPath="$PROJECT_DIR$/cyware/templates/github_login.html" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/templates/home.html" afterPath="$PROJECT_DIR$/cyware/templates/home.html" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/templates/invoice.html" afterPath="$PROJECT_DIR$/cyware/templates/invoice.html" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/templates/navbar.html" afterPath="$PROJECT_DIR$/cyware/templates/navbar.html" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/templates/search.html" afterPath="$PROJECT_DIR$/cyware/templates/search.html" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/tests.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/urls.py" afterPath="$PROJECT_DIR$/cyware/urls.py" />
+      <change beforePath="$PROJECT_DIR$/githubApiNew/views.py" afterPath="" />
       <change beforePath="$PROJECT_DIR$/plyproject/settings.py" afterPath="$PROJECT_DIR$/plyproject/settings.py" />
-      <change beforePath="$PROJECT_DIR$/plyproject/urls.py" afterPath="$PROJECT_DIR$/plyproject/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,33 +45,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plyproject/settings.py">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cyware/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1218">
-              <caret line="58" column="26" lean-forward="false" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+            <state relative-caret-position="63">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/githubApiNew/models.py">
+      <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cyware/apps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-              <folding>
-                <element signature="e#27#40#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="filter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/githubApiNew/filter.py">
+        <entry file="file://$PROJECT_DIR$/cyware/filter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="168">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -69,50 +77,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/githubApiNew/apps.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cyware/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/githubApiNew/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/githubApiNew/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/githubApiNew/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+            <state relative-caret-position="252">
+              <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#27#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cyware/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/githubApiNew/urls.py">
+        <entry file="file://$PROJECT_DIR$/cyware/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
               <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
@@ -123,21 +111,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/githubApiNew/tests.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cyware/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-279">
+              <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plyproject/urls.py">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plyproject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+            <state relative-caret-position="609">
+              <caret line="32" column="18" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -208,6 +198,11 @@
         <option value="$PROJECT_DIR$/githubApi/views.py" />
         <option value="$PROJECT_DIR$/githubApi/filter.py" />
         <option value="$PROJECT_DIR$/githubApi/models.py" />
+        <option value="$PROJECT_DIR$/cyware/urls.py" />
+        <option value="$PROJECT_DIR$/cyware/models.py" />
+        <option value="$PROJECT_DIR$/githubApiNew/views.py" />
+        <option value="$PROJECT_DIR$/cyware/views.py" />
+        <option value="$PROJECT_DIR$/cyware/filter.py" />
         <option value="$PROJECT_DIR$/plyproject/settings.py" />
       </list>
     </option>
@@ -245,7 +240,7 @@
             <path>
               <item name="plyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="plyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="githubApiNew" type="462c0819:PsiDirectoryNode" />
+              <item name="cyware" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="plyproject" type="b2602c69:ProjectViewProjectNode" />
@@ -265,13 +260,14 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.project" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vkumar02\djangoProject\plyproject\loginModule\static\loginModule" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\pycharm project\plyproject\cyware" />
       <recent name="C:\pycharm project\plyproject\githubApiV2" />
       <recent name="C:\pycharm project\plyproject\githubApi" />
       <recent name="C:\pycharm project\plyproject\githubApi\templates" />
-      <recent name="C:\Users\vkumar02\djangoProject\plyproject\loginModule\static\loginModule" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vkumar02\djangoProject\plyproject\loginModule\static\loginModule" />
     </key>
   </component>
@@ -357,63 +353,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/loginModule/templates/login/add_stock.html" />
-    <entry file="file://$PROJECT_DIR$/loginModule/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginModule/templates/login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginModule/templates/error.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginModule/templates/success.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginModule/templates/show_stock.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginModule/tables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="47" lean-forward="false" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginModule/static/loginModule/font.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginModule/templates/add_stock.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="170" column="9" lean-forward="false" selection-start-line="170" selection-start-column="9" selection-end-line="170" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginModule/static/loginModule/external.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -669,26 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/githubApiNew/filter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/githubApiNew/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding>
-            <element signature="e#27#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/githubApiNew/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -701,16 +620,108 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/githubApiNew/filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cyware/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cyware/static/font.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/githubApiNew/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/githubApiNew/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="115" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cyware/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cyware/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cyware/filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cyware/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="e#27#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cyware/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cyware/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/githubApiNew/views.py">
+    <entry file="file://$PROJECT_DIR$/cyware/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+        <state relative-caret-position="-279">
+          <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="22" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -719,8 +730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plyproject/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="58" column="26" lean-forward="false" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+        <state relative-caret-position="609">
+          <caret line="32" column="18" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
           <folding />
         </state>
       </provider>
