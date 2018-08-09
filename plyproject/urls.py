@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^loginModule/', include('loginModule.urls')),
     url(r'^githubApi/', include('githubApi.urls')),
+    url(r'^githubApiV2/', include('githubApiV2.urls')),
 ]
