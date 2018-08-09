@@ -19,6 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^loginModule/', include('loginModule.urls')),
-    url(r'^githubApiNew/', include('githubApiNew.urls')),
+    url(r'^cyware/', include('cyware.urls')),
     #url(r'^githubApiV2/', include('githubApiV2.urls')),
 ]
